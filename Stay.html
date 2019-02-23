@@ -57,21 +57,21 @@ int main() </br>
     char group[10],comet[10]; int i,grp=1,com=1; <span class="L"></br>/*'group', 'comet' are used to store the names of groups and comets respectively. 'i','grp','com' are used to store the values of looping variable, product of alphabets of group and product of alphabets of comet respectively.*/</span>
     scanf("%s",group);<span class="L"> //Accept group name</span></br>
     scanf("%s",comet);<span class="L">//Accept comet name </span></br>
-    for(i=0;i<strlen(group);i++)</br>
-    {</br>
-        grp*=(group[i]-64); <span class="L">//Calculate product of characters of group</span></br>
+    for(i=0;i < strlen(group); i++)</br>
+    {</br></br>
+        grp*=(group[i]-64); <span class="L">//Calculate product of characters of group</span></br></br>
     }</br>
-    for(i=0;i<strlen(comet);i++)</br>
-    {</br>
-        com*=(comet[i]-64); <span class="L">//Calculate product of characters of comet</span></br>
-    }</br>
-    grp%=47;com%=47; <span class="L">//Perform specified operation in question to check validity of condition.</span></br>
-    if(grp==com)<span class="L"> //Check the specified condition in question</span></br>
-        puts("GO"); <span class="L">//Print GO if condition is satisfied</span></br>
-    else</br>
-        puts("STAY");<span class="L">//Print STAY if condition is not satisfied</br></span>
-    return 0;</br>
-}</br>
+    for(i=0;i < strlen(comet); i++)</br></br>
+    {</br></br>
+        com*=(comet[i]-64); <span class="L">//Calculate product of characters of comet</span></br></br>
+    }</br></br>
+    grp%=47;com%=47; <span class="L">//Perform specified operation in question to check validity of condition.</span></br></br>
+    if(grp==com)<span class="L"> //Check the specified condition in question</span></br></br>
+        puts("GO"); <span class="L">//Print GO if condition is satisfied</span></br></br>
+    else</br></br>
+        puts("STAY");<span class="L">//Print STAY if condition is not satisfied</br></br></span>
+    return 0;</br></br>
+}</br></br>
 
 										</p></td></tr></tbody></table>
 								</section>

@@ -53,39 +53,39 @@ Note: The cipher only encrypts Alpha and Numeric. (A-Z, a-z, and 0-9) . All Symb
 #include< string.h></br>
 int main()</br>
 {</br>
-    char s[100000],op[100000]; int k,i; <span class="L">//'s' is used to store the message to be encrypted, 'op' is used to store encrypted message output, 'k' is used to store shift value and 'i' is the looping variable.</br></span>
-    gets(s);<span class="L"> // Accept the message to be encrypted.</br></span>
-    scanf("%d",&k);<span class="L"> // Accept the shift value (the value by which the characters are to be shifted.</br></span>
-    for(i=0;i<strlen(s);i++)</br>
-    {</br>
-        if(s[i]>=65&&s[i]<=90)<span class="L"> //Check if the character is UPPERCASE or not</br></span>
-                if((s[i]+(k%26))>90)<span class="L">//Check if the shifted value's ascii character is greater than 90 (which is invalid, because there is no UPPERCASE alphabet greater than Z)</br></span>
-                op[i]=64+((s[i]+(k%26))-90); <span class="L">// if yes, subtract 90 from the obtained sum (which will give us the normal shift value), and add it to 64 because after Z, the cycle should begin again from A</br>.</span>
-                else</br>
-                op[i]=s[i]+(k%26);<span class="L">// if no, proceed normally</br></span>
-            }</br>
-        else if(s[i]>=97&&s[i]<=122)<span class="L">//Check if the character is lowercase or not</br></span>
-            {</br>
-                if((s[i]+(k%26))>122)<span class="L">/*Check if the shifted value's ascii character is greater than 122 (which is invalid, because there is no lowercase alphabet greater than z)*/</br></span>
-                op[i]=96+((s[i]+(k%26))-122);<span class="L">// if yes, subtract 122 from the obtained sum (which will give us the normal shift value), and add it to 96 because after Z, the cycle should begin again from a.</br></span>
-                else</br>
-                op[i]=s[i]+(k%26);<span class="L">// if no, proceed normally</br></span>
-            }</br>
-        else if(s[i]>=48&&s[i]<=57)<span class="L">//Check if the character is a numeric digit or not</br></span>
-            {</br>
-                if((s[i]+(k%10))>57)<span class="L">/*Check if the shifted value's ascii character is greater than 57 (which is invalid, because there is no decimal digit greater than 9)*/</br></span>
-                op[i]=47+((s[i]+(k%10))-57);<span class="L">/* if yes, subtract 57 from the obtained sum (which will give us the normal shift value), and add it to 47 because after 9, the cycle should begin again from 0.*/</br></span>
-                else</br>
-                op[i]=s[i]+(k%10);<span class="L">// if no, proceed normally</br></span>
-            }</br>
-        else</br>
-            {</br>
-                op[i]=s[i];<span class="L"> //ignore (i.e don't shift) any other kind of character (which means special characters)</br></span>
-            }</br>
-    }</br>
-    puts(op); <span class="L">//print the output (the encrypted message)</br></span>
-    return 0;</br>
-}</br>
+    char s[100000],op[100000]; int k,i; <span class="L">  //'s' is used to store the message to be encrypted, 'op' is used to store encrypted message output, 'k' is used to store shift value and 'i' is the looping variable.</br></br></span>
+    gets(s);<span class="L">    // Accept the message to be encrypted.</br></br></span>
+    scanf("%d",&k);<span class="L">    // Accept the shift value (the value by which the characters are to be shifted.</br></br></span>
+    for(i=0; i < strlen(s); i++)</br></br>
+    {</br></br>
+        if(s[i]>=65&&s[i]<=90)<span class="L">      //Check if the character is UPPERCASE or not</br></br></span>
+                if((s[i]+(k%26))>90)<span class="L">     //Check if the shifted value's ascii character is greater than 90 (which is invalid,</br> because there is no UPPERCASE alphabet greater than Z)</br></br></span>
+                op[i]=64+((s[i]+(k%26))-90); <span class="L">   // if yes, subtract 90 from the obtained sum (which will give us the normal shift value), and add it to 64 because after Z, the cycle should begin again from A</br>.</br></span>
+                else</br></br>
+                op[i]=s[i]+(k%26);<span class="L">     // if no, proceed normally</br></br></span>
+            }</br></br>
+        else if(s[i]>=97&&s[i]<=122)<span class="L">   //Check if the character is lowercase or not</br></br></span>
+            {</br></br>
+                if((s[i]+(k%26))>122)<span class="L">  /*Check if the shifted value's ascii character is greater than 122 (which is invalid, because there is no lowercase alphabet greater than z)*/</br></br></span>
+                op[i]=96+((s[i]+(k%26))-122);<span class="L">   // if yes, subtract 122 from the obtained sum (which will give us the normal shift value), and add it to 96 because after Z, the cycle should begin again from a.</br></br></span>
+                else</br></br>
+                op[i]=s[i]+(k%26);<span class="L">  // if no, proceed normally</br></br></span>
+            }</br></br>
+        else if(s[i]>=48&&s[i]<=57)<span class="L">  //Check if the character is a numeric digit or not</br></br></span>
+            {</br></br>
+                if((s[i]+(k%10))>57)<span class="L">  /*Check if the shifted value's ascii character is greater than 57 (which is invalid, because there is no decimal digit greater than 9)*/</br></br></span>
+                op[i]=47+((s[i]+(k%10))-57);<span class="L">  /* if yes, subtract 57 from the obtained sum (which will give us the normal shift value), and add it to 47 because after 9, the cycle should begin again from 0.*/</br></br></span>
+                else</br></br>
+                op[i]=s[i]+(k%10);<span class="L">  // if no, proceed normally</br></br></span>
+            }</br></br>
+        else</br></br>
+            {</br></br>
+                op[i]=s[i];<span class="L">   //ignore (i.e don't shift) any other kind of character (which means special characters)</br></br></span>
+            }</br></br>
+    }</br></br>
+    puts(op); <span class="L">  //print the output (the encrypted message)</br></br></span>
+    return 0;</br></br>
+}</br></br>
 
 									</p></td></tr></tbody></table>
 								</section>

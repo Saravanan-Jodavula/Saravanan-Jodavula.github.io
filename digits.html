@@ -47,20 +47,20 @@ For each input test case of your program, you must print an integer containing t
 								</section>
 								<section>
 									<table><thead><tr><td>Here Goes The Code</td></tr></thead><tbody><tr><td><p>
-										#include< stdio.h > </br>
-										int main()                     </br>
-										{ </br>
-										    long long int n,m,temp,d=0; </br><span class="L"> /*long long int is used because of the input constraints. 'n','m','temp', and 'd' are used to store the values of base, index, temporary values, and number of digits respectively. */ </span></br>
-    scanf("%lld %lld",&n,&m);<span class="L">// Accept the base and the index</span> </br>
-    temp=pow(n,m);<span class="L"> // Calculate n^m</span>     </br>
-    while(temp!=0) <span class="L">//as long as the value of temp does not become equal to zero, keep running the loop.</span></br>
-    {</br>
-        temp/=10; <span class="L">// keep dividing n^m by 10</span></br>
-        d++; <span class="L">//And increment the counter variable 'd' to count the digits.</span></br>
-    }</br>
-    printf("%lld",d);<span class="L"> //Print the number of digits.</span>               </br>
-										          return 0;           </br>
-										          }           </br>
+										#include< stdio.h > </br></br>
+										int main()                    </br> </br>
+										{ </br></br>
+										    long long int n,m,temp,d=0; </br></br><span class="L"> /*long long int is used because of the input constraints. 'n','m','temp', and 'd' are used to store the values of base, index, temporary values, and number of digits respectively. */ </span></br></br>
+    scanf("%lld %lld",&n,&m);<span class="L">// Accept the base and the index</span> </br></br>
+    temp=pow(n,m);<span class="L"> // Calculate n^m</span>     </br></br>
+    while(temp!=0) <span class="L">//as long as the value of temp does not become equal to zero, keep running the loop.</span></br></br>
+    {</br></br>
+        temp/=10; <span class="L">// keep dividing n^m by 10</span></br></br>
+        d++; <span class="L">//And increment the counter variable 'd' to count the digits.</span></br></br>
+    }</br></br>
+    printf("%lld",d);<span class="L"> //Print the number of digits.</span> </br>              </br>
+										          return 0;           </br></br>
+										          }           </br></br>
 									</p></td></tr></tbody></table>
 								</section>
 								<section>
