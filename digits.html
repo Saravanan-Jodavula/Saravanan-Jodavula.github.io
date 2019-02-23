@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Digits</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>codeCraft</strong> by coding.Studio();</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/coding.studio/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/coding-Studio-vbit" class="icon fa fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Digits</h1>
+											<p>Time limit: 5 secs.</p>
+										</header>
+										<br>
+										<br>
+										<div class="problem"><h4><li>Given two integers, n and m, how many digits have nm?
+<b>Examples:</b><br>
+2 and 10 - 210 = 1024 - 4 digits<br>
+3 and 9 - 39 = 19683 - 5 digits</br><br>
+<b><u>Input</u></b></br></br>
+The input is composed of several test cases. The first line has an integer C, representing the number of test cases. The following C lines contain two integers N and M (1 <= N, M <= 100).</br><br>
+<b><u>Output</u></b></br><br>
+For each input test case of your program, you must print an integer containing the number of digits of the result of the calculated power in the respective test case.</li></h4></div><br>	
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>4 </br>1 1</br>2 10</br>3 9</br>100 100</br></p></td><td><p>1</br>4</br>5</br>201</br></p></td></tr></tbody></table>					
+								</section>
+								<section>
+									<table><thead><tr><td>Here Goes The Code</td></tr></thead><tbody><tr><td><p>
+										#include< stdio.h > </br>
+										int main()                     </br>
+										{ </br>
+										    long long int n,m,temp,d=0; </br><span class="L"> /*long long int is used because of the input constraints. 'n','m','temp', and 'd' are used to store the values of base, index, temporary values, and number of digits respectively. */ </span></br>
+    scanf("%lld %lld",&n,&m);<span class="L">// Accept the base and the index</span> </br>
+    temp=pow(n,m);<span class="L"> // Calculate n^m</span>     </br>
+    while(temp!=0) <span class="L">//as long as the value of temp does not become equal to zero, keep running the loop.</span></br>
+    {</br>
+        temp/=10; <span class="L">// keep dividing n^m by 10</span></br>
+        d++; <span class="L">//And increment the counter variable 'd' to count the digits.</span></br>
+    }</br>
+    printf("%lld",d);<span class="L"> //Print the number of digits.</span>               </br>
+										          return 0;           </br>
+										          }           </br>
+									</p></td></tr></tbody></table>
+								</section>
+								<section>
+									<header>
+											<h1>Test Cases</h1>
+										</header>
+										<table><thead><tr><td>Inputs</td><td>Outputs</td></tr></thead><tbody><tr><td class="divison"><p>1 1</br>2 10</br>3 9</br>2 19</br>16 16</br></p></td><td><p>1</br>4</br>5</br>6</br>19</br></p></td></tr></tbody></table>
+
+								</section>
+							</div>
+					</div>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="Sqared and cubic.html">#1 Squared and cubic</a></li>
+										<li><a href="digits.html">#2 Digits</a></li>
+										<li><a href="multiple adder.html">#3 Multiple Adder</a></li>
+										<li><a href="#">#4 Grains in a chessboard</a></li>
+										<li><a href="Age in days.html">#5 Age in Days</a></li>
+										<li><a href="Stay.html">#6 Stay or go</a></li>
+										<li><a href="cifer1.html">#7 Cipher</a></li>
+											
+								</nav>
+
+							<!-- Section -->
+							
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>We're always open to people who love coding!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">coding.Studio@gmail.com</a></li>
+										<li class="fa-home"><a href="https//:codingstudio.club">https://codingstudio.club</a></li>
+								
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; coding.Studio(); Vignana Bharathi Institute of Technology</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/jquery.min.js"></script>
+			<script src="assets/holder.min.js"></script>
+			<script src="assets/ie10-viewport-bug-workaround.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>

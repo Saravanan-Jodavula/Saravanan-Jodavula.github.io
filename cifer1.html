@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cifer1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>codeCraft</strong> by coding.Studio();</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/coding.studio/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/coding-Studio-vbit" class="icon fa fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Cifer</h1>
+											<p>Time limit: 2 secs.</p>
+										</header>
+										<br>
+										<br>
+										<div class="problem"><h4><li>Indian army is going to do a surprise attack on one of its enemies country. The President of India, the Supreme Commander of the Indian Army will be sending an alert message to all its commanding centers. As enemy would be monitoring the message, Indian army is going to encrypt(cipher) the message using basic encryption technique. A decoding key 'K' (number) would be sent secretly.
+You are assigned to develop a cipher program to encrypt the message. Your cipher must rotate every character in the message by a fixed number making it unreadable by enemies. 
+Given a single line of string 'S' containing alpha, numeric and symbols, followed by a number '0<=N<=1000'. Encrypt and print the resulting string.
+Note: The cipher only encrypts Alpha and Numeric. (A-Z, a-z, and 0-9) . All Symbols, such as - , ; %, remain unencrypted.
+<b><u>Example Input:</u></b></br></br>
+<p>All-convoYs-9-be:Alert1.<br>
+4</p>
+<b><u>Example Output:</u></b></br></br>
+<p>Epp-gsrzsCw-3-fi:Epivx5.</p>	
+
+																
+								</section>
+								<section>
+									<table><thead><tr><td>Here Goes The Code</td></tr></thead><tbody><tr><td><p>
+										#include< stdio.h></br>
+#include< string.h></br>
+int main()</br>
+{</br>
+    char s[100000],op[100000]; int k,i; <span class="L">//'s' is used to store the message to be encrypted, 'op' is used to store encrypted message output, 'k' is used to store shift value and 'i' is the looping variable.</br></span>
+    gets(s);<span class="L"> // Accept the message to be encrypted.</br></span>
+    scanf("%d",&k);<span class="L"> // Accept the shift value (the value by which the characters are to be shifted.</br></span>
+    for(i=0;i<strlen(s);i++)</br>
+    {</br>
+        if(s[i]>=65&&s[i]<=90)<span class="L"> //Check if the character is UPPERCASE or not</br></span>
+                if((s[i]+(k%26))>90)<span class="L">//Check if the shifted value's ascii character is greater than 90 (which is invalid, because there is no UPPERCASE alphabet greater than Z)</br></span>
+                op[i]=64+((s[i]+(k%26))-90); <span class="L">// if yes, subtract 90 from the obtained sum (which will give us the normal shift value), and add it to 64 because after Z, the cycle should begin again from A</br>.</span>
+                else</br>
+                op[i]=s[i]+(k%26);<span class="L">// if no, proceed normally</br></span>
+            }</br>
+        else if(s[i]>=97&&s[i]<=122)<span class="L">//Check if the character is lowercase or not</br></span>
+            {</br>
+                if((s[i]+(k%26))>122)<span class="L">/*Check if the shifted value's ascii character is greater than 122 (which is invalid, because there is no lowercase alphabet greater than z)*/</br></span>
+                op[i]=96+((s[i]+(k%26))-122);<span class="L">// if yes, subtract 122 from the obtained sum (which will give us the normal shift value), and add it to 96 because after Z, the cycle should begin again from a.</br></span>
+                else</br>
+                op[i]=s[i]+(k%26);<span class="L">// if no, proceed normally</br></span>
+            }</br>
+        else if(s[i]>=48&&s[i]<=57)<span class="L">//Check if the character is a numeric digit or not</br></span>
+            {</br>
+                if((s[i]+(k%10))>57)<span class="L">/*Check if the shifted value's ascii character is greater than 57 (which is invalid, because there is no decimal digit greater than 9)*/</br></span>
+                op[i]=47+((s[i]+(k%10))-57);<span class="L">/* if yes, subtract 57 from the obtained sum (which will give us the normal shift value), and add it to 47 because after 9, the cycle should begin again from 0.*/</br></span>
+                else</br>
+                op[i]=s[i]+(k%10);<span class="L">// if no, proceed normally</br></span>
+            }</br>
+        else</br>
+            {</br>
+                op[i]=s[i];<span class="L"> //ignore (i.e don't shift) any other kind of character (which means special characters)</br></span>
+            }</br>
+    }</br>
+    puts(op); <span class="L">//print the output (the encrypted message)</br></span>
+    return 0;</br>
+}</br>
+
+									</p></td></tr></tbody></table>
+								</section>
+								<section>
+									<header>
+											<h1>Test Cases</h1>
+										</header>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>abcdZXYzxy-999.@</br>
+200</p></td><td><p>stuvRPQrpq-999.@</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>----------a <br>
+100</p></td><td><p>----------w</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>AaZz190./Usa<br>
+26</p></td><td><p>AaZz756./Usa</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>AaZz190./Usa<br>
+27</p></td><td><p>BbAa867./Vtb</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>Bollywood is doomed!<br>
+69</p></td><td><p>Sfccpnffu zj uffdvu!</br></p></td></tr></tbody></table>
+								</section>
+							</div>
+					</div>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="Sqared and cubic.html">#1 Squared and cubic</a></li>
+										<li><a href="digits.html">#2 Digits</a></li>
+										<li><a href="multiple adder.html">#3 Multiple Adder</a></li>
+										<li><a href="#">#4 Grains in a chessboard</a></li>
+										<li><a href="Age in days.html">#5 Age in Days</a></li>
+										<li><a href="Stay.html">#6 Stay or go</a></li>
+										<li><a href="cifer1.html">#7 Cipher</a></li>
+											
+								</nav>
+
+							<!-- Section -->
+							
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>We're always open to people who love coding!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">coding.Studio@gmail.com</a></li>
+										<li class="fa-home"><a href="https//:codingstudio.club">https://codingstudio.club</a></li>
+								
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; coding.Studio(); Vignana Bharathi Institute of Technology</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/jquery.min.js"></script>
+			<script src="assets/holder.min.js"></script>
+			<script src="assets/ie10-viewport-bug-workaround.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Multiple adder</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>codeCraft</strong> by coding.Studio();</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/coding.studio/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/coding-Studio-vbit" class="icon fa fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Multiple Adder</h1>
+											<p>Time limit: 5 secs.</p>
+										</header>
+										<br>
+										<br>
+										<div class="problem"><h4><li>List all the natural numbers below N that are multiples of x or y. Print the sum of these multiples .
+.</br><br>
+<b><u>Example Input:</u></b></br></br>
+<p>3 5 100</p>
+<b><u>Example Output:</u></b></br></br>
+<p>2318</p>	
+<b><u>Explanation:</u></b></br></br>
+<p>The multiples of 3 and 5 below 100 are 3,6,9,5,10,12,15 etc.</p>
+<p>The sum of these multiples is 2318</p>
+																
+								</section>
+								<section>
+									<table><thead><tr><td>Here Goes The Code</td></tr></thead><tbody><tr><td><p>
+										#include< stdio.h > </br>
+										int main()                     </br>
+										{ </br>
+										    long int i,sum=0; int x,y,n; <span class="L">  /*'x','y','n','sum' are used to store the values of x, y, n and the sum of all multiples of x and y below n respectively. 'i' is used as a looping variable. */</br></span>
+										      scanf("%d %d %d",&x,&y,&n); <span class="L">/*Accept X, Y and N. N is the upper bound. Multiples of X and Y should be checked till N.*/</span>                 </br>
+										    for(i=1;i<=n;i++)<br>
+    { <br>
+        if(i%x==0||i%y==0) <span class="L">////Check if the number is multiple or not.</span>      </br>
+        sum+=i; <span class="L">//Add it the 'sum' variable.</span><br>
+  }               </br>
+  printf("%ld",sum);<span class="L">//Print the sum.</span></br>
+										          return 0;           </br>
+										          }           </br>
+									</p></td></tr></tbody></table>
+								</section>
+								<section>
+									<header>
+											<h1>Test Cases</h1>
+										</header>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>3 5 100</p></td><td><p>2318</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>2 7 6969</p></td><td><p>13877768</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>11 13 10000</p></td><td><p>8053045</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>5 9 800</p></td><td><p>91959</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>2 13 4000</p></td><td><p>4306308</br></p></td></tr></tbody></table>
+								</section>
+							</div>
+					</div>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="Sqared and cubic.html">#1 Squared and cubic</a></li>
+										<li><a href="digits.html">#2 Digits</a></li>
+										<li><a href="multiple adder.html">#3 Multiple Adder</a></li>
+										<li><a href="#">#4 Grains in a chessboard</a></li>
+										<li><a href="Age in days.html">#5 Age in Days</a></li>
+										<li><a href="Stay.html">#6 Stay or go</a></li>
+										<li><a href="cifer1.html">#7 Cipher</a></li>
+											
+								</nav>
+
+							<!-- Section -->
+							
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>We're always open to people who love coding!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">coding.Studio@gmail.com</a></li>
+										<li class="fa-home"><a href="https//:codingstudio.club">https://codingstudio.club</a></li>
+								
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; coding.Studio(); Vignana Bharathi Institute of Technology</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/jquery.min.js"></script>
+			<script src="assets/holder.min.js"></script>
+			<script src="assets/ie10-viewport-bug-workaround.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>

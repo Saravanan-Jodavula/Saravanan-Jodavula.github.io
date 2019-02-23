@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Squared and cubed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>codeCraft</strong> by coding.Studio();</a>
+									<ul class="icons">
+										
+										<li><a href="https://www.instagram.com/coding.studio/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/coding-Studio-vbit" class="icon fa fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Squared and cubic</h1>
+											<p>Time limit: 5 secs.</p>
+										</header>
+										<br>
+										<br>
+										<div class="problem"><h4><li>Write a program that reads an integer N (1 < N < 1000). This N is the number of output lines printed by this program.</br><br>
+<b><u>Input</u></b></br></br>
+The input file contains an integer N</br><br>
+<b><u>Output</u></b></br><br>
+Print the output according to the given example.</li></h4></div><br>	
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>5</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br></p></td></tr></tbody></table>						
+								</section>
+								<section>
+									<table><thead><tr><td>Here Goes The Code</td></tr></thead><tbody><tr><td><p>
+										#include< stdio.h > </br>
+										int main()                     </br>
+										{ </br>
+										    int n,i;  <span class="L">  /*'N' is the number up to which the squares and cubes are to be printed. 'i' is the looping variable. */</br></span>
+										    scanf("%d",&n); <span class="L">//Accept 'n'</span>                 </br>
+										    for(i=1;i<=n;i++)<br>
+    { <br>
+        printf("%d %d %d\n",i,i*i,i*i*i); <span class="L">//Loop and print the squares and cubes of every number up to N separated by a new line.</span>      </br>}               </br>
+										          return 0;           </br>
+										          }           </br>
+									</p></td></tr></tbody></table>
+								</section>
+								<section>
+									<header>
+											<h1>Test Cases</h1>
+										</header>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>5</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br></p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>15</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br>6 36 216<br>
+7 49 343<br>
+8 64 512<br>
+9 81 729<br>
+10 100 1000<br>
+11 121 1331<br>
+12 144 1728<br>
+13 169 2197<br>
+14 196 2744<br>
+15 225 3375</p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>36</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br>6 36 216
+7 49 343</br>
+8 64 512</br>
+9 81 729</br>
+10 100 1000</br>
+11 121 1331</br>
+12 144 1728</br>
+13 169 2197</br>
+14 196 2744</br>
+15 225 3375</br>
+16 256 4096</br>
+17 289 4913</br>
+18 324 5832</br>
+19 361 6859</br>
+20 400 8000</br>
+21 441 9261</br>
+22 484 10648</br>
+23 529 12167</br>
+24 576 13824</br>
+25 625 15625</br>
+26 676 17576</br>
+27 729 19683</br>
+28 784 21952</br>
+29 841 24389</br>
+30 900 27000</br>
+31 961 29791</br>
+32 1024 32768</br>
+33 1089 35937</br>
+34 1156 39304</br>
+35 1225 42875</br>
+36 1296 46656</p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>7</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br>6 36 216</br>
+7 49 343</p></td></tr></tbody></table>
+										<table><thead><tr><td>Input</td><td>Output</td></tr></thead><tbody><tr><td class="divison"><p>13</p></td><td><p>1 1 1</br>2 4 8</br>3 9 27</br>4 16 64</br>5 25 125</br>6 36 216
+7 49 343</br>
+8 64 512</br>
+9 81 729</br>
+10 100 1000</br>
+11 121 1331</br>
+12 144 1728</br>
+13 169 2197</br></p></td></tr></tbody></table>
+
+										
+
+								</section>
+							</div>
+					</div>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="Sqared and cubic.html">#1 Squared and cubic</a></li>
+										<li><a href="digits.html">#2 Digits</a></li>
+										<li><a href="multiple adder.html">#3 Multiple Adder</a></li>
+										<li><a href="#">#4 Grains in a chessboard</a></li>
+										<li><a href="Age in days.html">#5 Age in Days</a></li>
+										<li><a href="Stay.html">#6 Stay or go</a></li>
+										<li><a href="cifer1.html">#7 Cipher</a></li>
+											
+								</nav>
+
+							<!-- Section -->
+							
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>We're always open to people who love coding!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">coding.Studio@gmail.com</a></li>
+										<li class="fa-home"><a href="https//:codingstudio.club">https://codingstudio.club</a></li>
+								
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; coding.Studio(); Vignana Bharathi Institute of Technology</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/jquery.min.js"></script>
+			<script src="assets/holder.min.js"></script>
+			<script src="assets/ie10-viewport-bug-workaround.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>
